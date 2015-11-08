@@ -7,7 +7,7 @@ plot4 <- function(){
   old.par <-par(mfrow=c(2,2))
   
   #Top Left graph
-  plot(myData$Global_active_power, type="l", ylab = "Global Active Power (kilowatts)", xlab="", x=myData$theDate)
+  plot(myData$Global_active_power, type="l", ylab = "Global Active Power", xlab="", x=myData$theDate)
   
   #Top right graph
   plot(myData$Voltage,type="l", ylab = "Voltage", xlab="datetime", x=myData$theDate)
@@ -19,7 +19,7 @@ plot4 <- function(){
   legend("topright", legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty = 1, col = c("black", "red", "blue"),lwd=1, bty="n")
   
   #Bottom Right Graph
-  plot(myData$Global_reactive_power,type="l", xlab="datetime", x=myData$theDate)
+  plot(myData$Global_reactive_power,type="l", ylab = "Global_reactive_power", xlab="datetime", x=myData$theDate)
   
   par(old.par)
 }
