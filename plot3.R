@@ -22,5 +22,5 @@ getData3 <- function(fileUrl = "https://d396qusza40orc.cloudfront.net/exdata%2Fd
 }
 
 png("plot3.png", bg=NA)
-plot2()
+plot3()
 dev.off()
