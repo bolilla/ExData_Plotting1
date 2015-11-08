@@ -13,13 +13,13 @@ plot4 <- function(){
   plot(myData$Voltage,type="l", ylab = "Voltage", xlab="datetime", x=myData$theDate)
 
   #Bottom Left Graph
-  plot(myData$Sub_metering_1,type="l", ylab = "Global Active Power (kilowatts)", xlab="", x=myData$theDate, ylim=c(0,max(myData$Sub_metering_1, myData$Sub_metering_2,myData$Sub_metering_3)))
+  plot(myData$Sub_metering_1,type="l", ylab = "Energy sub metering", xlab="", x=myData$theDate, ylim=c(0,max(myData$Sub_metering_1, myData$Sub_metering_2,myData$Sub_metering_3)))
   lines(myData$Sub_metering_2, x=myData$theDate,type = "l", col="red")
   lines(myData$Sub_metering_3, x=myData$theDate,type = "l", col="blue")
   legend("topright", legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty = 1, col = c("black", "red", "blue"),lwd=1, bty="n")
   
   #Bottom Right Graph
-  plot(myData$Global_reactive_power,type="l", ylab = "Voltage", xlab="datetime", x=myData$theDate)
+  plot(myData$Global_reactive_power,type="l", xlab="datetime", x=myData$theDate)
   
   par(old.par)
 }
